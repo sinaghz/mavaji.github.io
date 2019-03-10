@@ -22,6 +22,10 @@ tags:
 [Source Code](https://github.com/mavaji/pars-morph)
 
 {::options parse_block_html="true" /}
+[<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>]({{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.tex)
+
+<object data="{{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.pdf" width="1000" height="1500" type='application/pdf' border="0" />
+
 <div dir='rtl' align='right'>
 # پارس مورف: تحلیلگر صرفی زبان فارسی
 

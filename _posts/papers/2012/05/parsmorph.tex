@@ -8,6 +8,7 @@
 \usepackage[top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{authblk}
 \usepackage{polyglossia}
 \setotherlanguage{english}
 \setotherlanguage{persian}
@@ -17,14 +18,19 @@
 \defpersianfont\mfo[Scale=1.2]{IRLotus}
 \setlatintextfont[Scale=1]{IRLotus}
 
+\setcounter{Maxaffil}{0}
+\renewcommand\Authands{ و }
+\renewcommand\Affilfont{\itshape\small}
+
 \begin{document}
     \title{پارس مورف: تحلیلگر صرفی زبان فارسی}
-    \author{
-    وحید مواجی\\
-    محرم اسلامی\\
-    بهرام وزیرنژاد
-    }
-    \date{27 اردیبهشت 1391}
+    \author[1]{وحید مواجی}
+    \author[2]{محرم اسلامی}
+    \author[1]{بهرام وزیرنژاد}
+    \affil[1]{دانشگاه صنعتی شریف}
+    \affil[2]{دانشگاه زنجان}
+%    \date{27 اردیبهشت 1391}
+    \date{}
     \maketitle
 
     \section{چکیده}

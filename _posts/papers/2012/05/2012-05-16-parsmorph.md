@@ -19,9 +19,10 @@ tags:
 [Mavaji, V., Eslami, M., Vazirnezhad, B., "Pars Morph: A Persian Morphological Analyzer", Journal of Signal and Data Processing, Vol. 15, Issue 1, pp. 3-8, ISSN: 2008-3262, 2012.](http://jsdp.rcisp.ac.ir/article-1-714-en.html)
 {: style="text-align: justify;"}
 
-[Source Code](https://github.com/mavaji/pars-morph)
 
 {::options parse_block_html="true" /}
+[<i class="fab fa-github-square"></i>](https://github.com/mavaji/pars-morph)
+[<i class="fas fa-file-pdf" aria-hidden="true"></i>]({{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.pdf)
 [<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>]({{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.tex)
 
 <object data="{{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.pdf" width="1000" height="1500" type='application/pdf' border="0" />

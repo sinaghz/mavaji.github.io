@@ -12,6 +12,11 @@ tags:
   - Persian-NLP
   - پارس مورف
   - تحلیلگر صرفی
+  - ترکیب
+  - اشتقاق
+  - تصریف
+  - واژه‌سازی
+  - زبان فارسی
 ---
 
 Mavaji, V., Eslami, M., Vazirnezhad, B., "Pars Morph: A Persian Morphological Analyzer", Journal of Signal and Data Processing, Vol. 15, Issue 1, pp. 3-8, ISSN: 2008-3262, 2012.

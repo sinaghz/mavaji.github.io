@@ -18,13 +18,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "VAHID MAVAJI"
 title_separator          : "-"
-name                     : ""
+name                     : "وحید مواجی"
 description              : "Personal Website of Vahid Mavaji | سایت شخصی وحید مواجی"
 url                      : "https://mavaji.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "mavaji/mavaji.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
@@ -115,7 +115,7 @@ author:
   foursquare       :
   github           : "mavaji"
   gitlab           :
-  goodreads        : "64296995-vahid-mavaji"
+  goodreads        : "mavaji"
   google_plus      :
   keybase          :
   instagram        : 

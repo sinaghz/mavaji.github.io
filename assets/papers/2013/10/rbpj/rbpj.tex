@@ -14,7 +14,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
 
-    \title{Effect of Buffer Size and Packet Delay on the Survivability of Packet Switched Networks \footnote{dfdfdf}}
+    \title{Effect of Buffer Size and Packet Delay on the Survivability of Packet Switched Networks}
     \date{7 October 2013}
     \author{\IEEEauthorblockN{1\textsuperscript{st} Vahid Mavaji}
     \IEEEauthorblockA{\textit{Department of Computer Engineering} \\
@@ -63,37 +63,48 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     \begin{equation}
         PL_{path}=\sum_{i=1}^nPL_i
     \end{equation}
+    Now, we obtain the expectation or mean value of packet loss in a path. The long term average rate of packet loss in a node is equal to packet loss probability of that node, denoted it by $PL_i$.
 
     \begin{equation}
         E\left[PL_{path}\right]=E\left[\sum_{i=1}^nPL_i\right]=\sum_{i=1}^{E\left[n\right]}E\left[PL_i\right]
     \end{equation}
+
+    Now, we have to calculate the mean value of packet loss in each node. The packet loss probability is the probability that the buffer is full and there is no space for new packets. From queuing theory it is equal to PL \cite{b4}:
 
     \begin{equation}
         PL=P_{B+1}=\frac{{\left(\frac{\lambda}{\mu}\right)^{B+1}}{\left(1-\frac{\lambda}{\mu}\right)} }
         {{1-\left(\frac{\lambda}{\mu}\right)}^{B+2}}
     \end{equation}
 
+    An important thing to consider is that our model is of open queuing network type and the assumption of independence of arrival is no longer held. That is, the arrival rate to the second node is dependent on service rate and packet loss of the first node. In the same manner, the third node is dependent on the second node and so on. Therefore the Poisson property of arrivals in no longer valid and the computation will be very complex. For this reason, we define an approximating assumption: the arrival rate of all nodes remain Poisson, but the corresponding $\lambda$ changes. For example, suppose that we want to know the arrival rate of node i; we know that the arrival rate of its preceding node is $\lambda_{i-1}$ and the packets are lost with the probability $PL_{i-1}$. Therefore, with a simple approximation, the arrival rate of the $i^{th}$ node can be calculated:
+
     \begin{equation}
         \lambda_i=\lambda_{i-1} \times PL_{i-1}
     \end{equation}
+    And also:
     \begin{equation}
         \lambda_1=\lambda
     \end{equation}
 
+    \textbf{Step 2:} we calculate the mean value of a typical path's delay. A packet traversing from source to destination, wait a time equal to $W$ in each node, then enters a link and has a propagation delay equal to $t_p$. Therefore, as there are $N$ nodes and $N-1$ links, the path's delay is:
     \begin{equation}
         Delay_{path}=\sum_{i=1}^{E\left[n\right]}W_i+\left(N-1\right)t_p
     \end{equation}
 
-    \cite{b4}
+    Where, $W_i$ is the value of $W$ when $\lambda=\lambda_i$, and $W$ is the waiting time of a $m/m/1/k$ queue which in turn is \cite{b4}
 
     \begin{equation}
         W=\sum_{n=0}^B\frac{\left(n+1\right)P_n}
         {\mu\left(1-P_{B+1}\right)}=\frac{L-\left(B+2\right)P_{B+1}+1}{\mu\left(1-P_{B+1}\right)}
     \end{equation}
 
+    $L$ is the mean number of packets in a node and is equal to \cite{b4}:
+
     \begin{equation}
         L=\frac{\lambda\left(1+\left(B+1\right)\left(\frac{\lambda}{\mu}\right)^{B+2}-\left(B+2\right)\left(\frac{\lambda}{\mu}\right)^{B+1}\right)}{\left(\mu-\lambda\right)\left(1-\left(\frac{\lambda}{\mu}\right)^{B+2}\right)}
     \end{equation}
+
+    Therefore, we have:
 
     \begin{equation}
         \begin{split}
@@ -104,7 +115,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     \section{Simulation Results} \label{sec:simres}
 
     \section{Conclusion} \label{sec:conc}
-    We have presented in this paper a queuing-theory based model for general-case packet-switched network in which the nodes are $m/m/1/k$ queues. Parameters such as buffer size and packets’ delay were considered important in determining the survivability of such network. Simulation results are in accordance with the model. It was shown that increasing the buffer size has a positive impact on the survivability. Increasing the number of nodes and the link failure probability both decrease the survivability.
+    We have presented in this paper a queuing-theory based model for general-case packet-switched network in which the nodes are $m/m/1/k$ queues. Parameters such as buffer size and packets' delay were considered important in determining the survivability of such network. Simulation results are in accordance with the model. It was shown that increasing the buffer size has a positive impact on the survivability. Increasing the number of nodes and the link failure probability both decrease the survivability.
 
     The future work is to impose more realistic limitations on network properties such as dependence of node failures on each other, the impact of traffic resulted from path replacement on packet loss, the impact of link failure on packets' delay, assuming different structures for network nodes, dependence of link failures on each other, the possibility of repair and recovery in the network and so on.
     %    \section{Ease of Use}

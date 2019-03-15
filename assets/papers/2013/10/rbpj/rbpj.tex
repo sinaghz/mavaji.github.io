@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage[linktocpage=true,colorlinks,citecolor=blue,pagebackref=false]{hyperref}
+\usepackage[linktocpage=true,colorlinks,citecolor=blue,pagebackref=true]{hyperref}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -108,7 +108,38 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{equation}
         \begin{split}
-            E\left[Delay_{path}\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)\\&+\left(E\left[N\right]-1\right)E\left[t_p\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)\\&+\frac{E\left[Len_{link}\right]}{C}
+            &E\left[Delay_{path}\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)+\left(E\left[N\right]-1\right)E\left[t_p\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)+\frac{E\left[Len_{link}\right]}{C}
+        \end{split}
+    \end{equation}
+
+    $Len_{link}$ is a random variable and demonstrates the distribution of links' length. $C$ is the light speed or more precisely, the propagation speed of waves in the links.
+
+    Now, for evaluating the survivability of a path, we employ the following reasoning:
+    If the path doesn't fail, as long as the values of packet loss and packets' delay don't exceed a specific threshold, the survivability is equal to one. When these values exceed their thresholds, the value of survivability has inverse relation with the difference of packet loss and delay to their threshold. Now, if this path fails, with some probability, a spare path is chosen, and then the survivability of this new path determines the survivability of the previous one. Therefore the similarity of the statistical properties of the paths helps us and the following equations are obtained:
+
+    \begin{equation}
+        \begin{split}
+            &Survivability\\&=\frac{1-P_{path\_failure}}{1+\max\left(PL_{path}-T_{PL},0\right)+\max\left(Delay_{path}-T_{Delay},0\right)}\\&+P_{path\_failure}\times P_{existence\_of\_backup\_path}\times
+            Survivability
+        \end{split}
+    \end{equation}
+
+    \begin{equation}
+        \begin{split}
+            \Rightarrow
+            Survivability=
+            {
+            \left( 1-P_{path\_failure} \right)
+            }
+            \div
+
+            {
+            \left(
+            \left(1+\max\left(PL_{path}-T_{PL},0\right)+\max\left(Delay_{path}-T_{Delay},0 \right)\right)
+             \times
+            \left(1- P_{path\_failure}\times P_{existence\_of\_backup\_path} \right)
+            \right)
+            }
         \end{split}
     \end{equation}
 

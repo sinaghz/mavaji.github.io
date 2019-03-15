@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage[linktocpage=true,colorlinks,citecolor=blue,pagebackref=true]{hyperref}
+\usepackage{datetime}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -15,6 +16,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
     \title{Effect of Buffer Size and Packet Delay on the Survivability of Packet Switched Networks}
+    \IEEEpubid{$1^{st}$ National Conference on New Approaches in Computer Engineering and Information Retrieval, 7 October 2013}
     \date{7 October 2013}
     \author{\IEEEauthorblockN{1\textsuperscript{st} Vahid Mavaji}
     \IEEEauthorblockA{\textit{Department of Computer Engineering} \\
@@ -53,6 +55,11 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     The rest of this paper is organized as follows: in Section \ref{sec:rlwork} a literature survey is presented. In Section \ref{sec:prel} the preliminaries and assumption of the problem are clarified. In Section \ref{sec:eval} a model for evaluating the survivability is derived. Section~\ref{sec:simres} presents the simulation results and Section \ref{sec:conc} concludes the paper.
 
     \section{Related Work} \label{sec:rlwork}
+    Four of the issues that arise in the development of survivable architectures are discussed in \cite{b5}. A framework for providing survivability to group communications, where part of the underlying traffic layer infrastructure is connection oriented, is presented in \cite{b13}. The framework is multi-layered to express the virtual overlays inherent to networked systems.
+
+    In \cite{b14}, the use of a hop-limit constraint with techniques to provide survivability for connection-oriented ATM group communications is examined. A hop-limit: (1) limits the number of routes considered such that the routing problems of higher order complexity can be solved, and (2) limits the length of any individual route to meet specific Quality of Service guarantees (such as delay).
+
+    A quantitative approach to evaluate network survivability is proposed in \cite{b2}. The network survivability is perceived as a composite measure consisting of both network failure duration and failure impact on the network. A wireless ad-hoc network is analyzed as an example, and the excess packet loss due to failures (ELF) is taken as the survivability performance measure. To obtain ELF, a two-phase approach is adopted consisting of the steady-state availability analysis and system transient performance analysis. Assuming Markovian property for the system, this measure is obtained by solving a set of Markov models.
 
     \section{Preliminaries} \label{sec:prel}
 
@@ -135,6 +142,8 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
             \right)}
         \end{split}
     \end{equation}
+
+    $P_{path\_failure}$ is the failure probability of the path and its value is equal to the probability that at least, one of the path’s links fails. Therefore:
 
     \section{Simulation Results} \label{sec:simres}
 

@@ -1,4 +1,4 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[onecolumn,conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
@@ -108,7 +108,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{equation}
         \begin{split}
-            &E\left[Delay_{path}\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)+\left(E\left[N\right]-1\right)E\left[t_p\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)+\frac{E\left[Len_{link}\right]}{C}
+            &E\left[Delay_{path}\right]\\&=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)+\left(E\left[N\right]-1\right)E\left[t_p\right]=\sum_{i=1}^n\left(\frac{L_i-\left(B+2\right)P_{i,B+1}+1}{\mu\left(1-P_{i,B+1}\right)}\right)+\frac{E\left[Len_{link}\right]}{C}
         \end{split}
     \end{equation}
 
@@ -119,27 +119,20 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{equation}
         \begin{split}
-            &Survivability\\&=\frac{1-P_{path\_failure}}{1+\max\left(PL_{path}-T_{PL},0\right)+\max\left(Delay_{path}-T_{Delay},0\right)}\\&+P_{path\_failure}\times P_{existence\_of\_backup\_path}\times
+            &Survivability\\&=\frac{1-P_{path\_failure}}{1+\max\left(PL_{path}-T_{PL},0\right)+\max\left(Delay_{path}-T_{Delay},0\right)}+P_{path\_failure}\times P_{existence\_of\_backup\_path}\times
             Survivability
         \end{split}
     \end{equation}
 
     \begin{equation}
         \begin{split}
-            \Rightarrow
-            Survivability=
-            {
-            \left( 1-P_{path\_failure} \right)
-            }
-            \div
-
-            {
-            \left(
+            &\Rightarrow Survivability
+            \\&=\frac{\left( 1-P_{path\_failure} \right)}
+            {\left(
             \left(1+\max\left(PL_{path}-T_{PL},0\right)+\max\left(Delay_{path}-T_{Delay},0 \right)\right)
-             \times
+            \times
             \left(1- P_{path\_failure}\times P_{existence\_of\_backup\_path} \right)
-            \right)
-            }
+            \right)}
         \end{split}
     \end{equation}
 

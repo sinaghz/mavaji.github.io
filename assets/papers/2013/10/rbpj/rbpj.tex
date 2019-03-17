@@ -61,7 +61,56 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     A quantitative approach to evaluate network survivability is proposed in \cite{b2}. The network survivability is perceived as a composite measure consisting of both network failure duration and failure impact on the network. A wireless ad-hoc network is analyzed as an example, and the excess packet loss due to failures (ELF) is taken as the survivability performance measure. To obtain ELF, a two-phase approach is adopted consisting of the steady-state availability analysis and system transient performance analysis. Assuming Markovian property for the system, this measure is obtained by solving a set of Markov models.
 
+    In \cite{b11}, a mathematical model for an efficient lightpath routing called \textit{Load Distribution-Survivable Lightpath Routing (LD-SLR)} is proposed, which can mitigate the impact of the failure disruption in the OVPN by introducing the load distribution concept to the survivable lightpath routing.
+
+    In \cite{b12}, the following question is addressed: what is the minimum number of links that has to be added to a physical topology so that the survivable routing of a logical ring is possible? An ILP formulation for finding the optimal solution of the problem is provided. An optimization model for the design of survivable wireless access networks is proposed in \cite{b1}. The main objective of the model is to optimize the network design cost of wireless backhaul networks while meeting survivability requirements. A simple and efficient heuristic method to solve the network design model for large network problem sizes within a reasonable computational time is also presented.
+
+    Several survivable architectures for telephone subscriber network based on common survivability principles are proposed in \cite{b6}. In order to quantitatively assess the effectiveness of design alternatives, a set of analytical models are developed to derive various survivability measures. In \cite{b7}, a general survivability quantification framework which is applicable to a wide range of system architectures, applications, failure/recovery behaviors, and desired metrics is proposed. An illustrative example of a telecommunications switching system is given for the ease of discussion.
+
+    A composite model for survivability that consists of performance and availability analysis is proposed in \cite{b3}. An analytical technique is presented to find the excess loss due to failure (ELF) when the system is operating in gracefully degraded states.
+
+    In \cite{b8}, the Spare Capacity Allocation (SCA) problem structure is unraveled using a matrix-based model. A fast and efficient approximation algorithm, termed successive survivable routing (SSR), is also developed. The problem of provisioning spare capacity in multi-layer backbone networks in order to meet survivability requirements is considered in \cite{b9}. A matrix based model is presented showing how failure propagation can be mapped across network layers.
+
+    In \cite{b10} authors propose a survivability scheme to support reliable service of the wireless access point level (BS-base station system). With the survivability scheme, the mobile network can use an overlap BS of the cellular network architecture after a BS system failure. The performance of the proposed scheme is analyzed using Markov models. The proposed scheme shows that service of the mobile network can be provided under the BS system failure.
+
+    Through analyzing the changes of key services' performance index value before and after evaluation, \cite{b15} proposed a novel quantitative analysis method for network survivability based on grey relational analysis. Starting with the normalization of decision matrix with interval number, the proposed method firstly applies grey relational analysis to assess the best affiliate degree and survival probability of every key service. Then, it analyzes the changes of every key service's survivability based on network entropy difference. Finally, it obtains the synthetic analysis for the whole network survivability.
+
     \section{Preliminaries} \label{sec:prel}
+    For evaluating the survivability of packet switched networks, we suppose that each of network nodes has the structure depicted in Fig. \ref{fig:1}, i.e. each of them is an $m/m/1/k$ queue.
+
+    \begin{figure}[htbp]
+        \centering
+        \makebox[\textwidth]{\includegraphics{rbpj1.png}}
+        \caption{Structure of network nodes}
+        \label{fig:1}
+    \end{figure}
+
+    Moreover, suppose that the network is a set of such nodes, so that its topology is unknown. A sample network is shown in Fig. \ref{fig:2}.
+
+    \begin{figure}[htbp]
+        \centering
+        \makebox[\textwidth]{\includegraphics{rbpj2.png}}
+        \caption{A sample network consisting of $m/m/1/k$ nodes}
+        \label{fig:2}
+    \end{figure}
+
+    For example, there are several potential paths between the source and the destination nodes. Suppose that the path $\{a, b, c, d\}$ is established. If for some reason, this path is disconnected, another path can be used as a replacement. For instance, if link c fails, the paths $\{m, h\}$ or $\{i, l, o, h\}$ can be used.
+
+    An important consideration is that in general case and in packet switched network, the network topology in unknown. That is, we have to consider anything as statistical. For performing mathematical operations, most of network parameters most be treated as random variables. The following assumptions about nodes and the network itself are made:
+
+    \begin{enumerate}
+        \item Network nodes have the same statistical properties.
+        \item The routing algorithm selects each of alternative paths with equal probability.
+        \item The network links fail independently from each other.
+        \item If at least one of the path's links fails, we consider that path as failed (disconnected).
+        \item The network paths have the same statistical properties.
+        \item The number of nodes of a path is a random variable called $N$.
+        \item The failure probability of each link is $LF$.
+        \item The buffer size of each node is equal to $B$.
+        \item Packet arrival to each node has the Poisson distribution with parameter $\lambda$.
+        \item Service rate to the packets is $\mu$.
+        \item Initially, there are $R$ paths.
+    \end{enumerate}
 
     \section{Evaluating the Survivability} \label{sec:eval}
     With the above assumptions, we begin the modeling process.
@@ -143,7 +192,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
         \end{split}
     \end{equation}
 
-    $P_{path\_failure}$ is the failure probability of the path and its value is equal to the probability that at least, one of the path’s links fails. Therefore:
+    $P_{path\_failure}$ is the failure probability of the path and its value is equal to the probability that at least, one of the path's links fails. Therefore:
 
     \section{Simulation Results} \label{sec:simres}
 

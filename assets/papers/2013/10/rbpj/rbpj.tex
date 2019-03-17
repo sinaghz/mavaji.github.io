@@ -194,6 +194,51 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     $P_{path\_failure}$ is the failure probability of the path and its value is equal to the probability that at least, one of the path's links fails. Therefore:
 
+    \begin{equation}
+        P_{path\_failure}=1-\left( 1-LF \right)^{E\left[ N \right]-1}
+    \end{equation}
+
+    $P_{existence\_of\_backup\_path}$, is the probability of existence of a spare path. Considering the fact that initially, there are $R$ non-failed paths and the probability of non-existence of any spare path is equal to the probability that $R-1$ paths fail, we have:
+
+    \begin{equation}
+        P_{existence\_of\_backup\_path} = 1-\left( P_{path\_failure} \right)^{R-1}
+    \end{equation}
+
+    $T_{PL}$ and $T_{Delay}$ are the threshold values for packet loss and packets' delay respectively. That is, if these parameters exceed the thresholds, survivability begins to decrease with inverse relation.
+
+    The value of survivability is between zero and one. Proof:
+
+    \begin{equation}
+        \begin{split}
+            Let:&P_1=P_{path\_failure},\\
+            &P_2=P_{existence\_of\_backup\_path} \\
+            &0 \leq P_1 \leq 1, \\
+            &0 \leq P_2 \leq 1 \\
+            &\Rightarrow P_1 \geq P_1P_2
+        \end{split}
+    \end{equation}
+
+    \begin{equation}
+        \begin{split}
+            &\Rightarrow 1-P_1\leq 1-P_1P_2 \\
+            &\Rightarrow \frac{1-P_1}{1-P_1P_2}\leq1
+        \end{split}
+    \end{equation}
+
+    \begin{equation}
+        \begin{split}
+            & 1+\max\left( PL_{path} -T_{PL},0 \right)+\max\left( Delay_{path}-T_{Delay},0 \right) \geq 1 \\
+            \Rightarrow & \frac{1}{1+\max\left( PL_{path} -T_{PL},0 \right)+\max\left( Delay_{path}-T_{Delay},0 \right)} \leq 1 \\
+            \Rightarrow & \frac{1-P_1}{1-P_1P_2}\times\frac{1}{1+\max\left( PL_{path} -T_{PL},0 \right)+\max\left( Delay_{path}-T_{Delay},0 \right)}\leq 1 \\
+            \Rightarrow & Survivability \leq 1
+        \end{split}
+    \end{equation}
+
+    It is easy to show that the value of survivability is always greater or equal to zero, so:
+    \begin{equation}
+        0 \leq Survivability \leq 1
+    \end{equation}
+    
     \section{Simulation Results} \label{sec:simres}
 
     \section{Conclusion} \label{sec:conc}

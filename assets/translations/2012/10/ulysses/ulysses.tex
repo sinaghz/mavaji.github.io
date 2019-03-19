@@ -22,30 +22,7 @@
 \setlatintextfont[Scale=1]{IRLotus}
 %\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \makeglossaries
-
-\newglossaryentry{richardbest}
-{
-name={Richard Best},
-description={ریچارد بِست}
-}
-
-\newglossaryentry{maths}
-{
-name={مک‌داول},
-description={MacDowell}
-}
-
-\setcounter{Maxaffil}{0}
-\renewcommand\Authands{ و }
-\renewcommand\Affilfont{\itshape\small}
-\providecommand{\keywords}[1]{\textbf{\textit{کلیدواژه‌ها:}} #1}
-
-\newcommand{\LeopoldBloom}{\textit{لئوپلد بلوم}}
-\newcommand{\Bloom}{\textit{بلوم}}
-\newcommand{\Rudolph}{\textit{رودلف}}
-\newcommand{\Ellen}{\textit{الن}}
-\newcommand{\MarionBloom}{\textit{مریان (مالی) بلوم}}
-\newcommand{\stephen}{\textit{استیون ددالوس}}
+\loadglsentries{glossary}
 
 \begin{document}
     \title{خلاصۀ اولیس \footnote{\lr{SparkNotes Editors. ``SparkNote on Ulysses.'' SparkNotes.com. SparkNotes LLC. 2003.}}}
@@ -61,9 +38,9 @@ description={MacDowell}
 
     \part{}
     \chapter{شخصیت‌ها}
-    دیروز \glsdesc{richardbest} رفته بود
-
-    امروز \footnote{\gls{maths}}.
+    دیروز \gls{LeopoldBloom} رفته بود
+    دیروز \gls{Rudolph} رفته بود
+    دیروز \gls{Ellen} رفته بود
 
     \part{}
     \chapter{تلماخوس}
@@ -87,8 +64,6 @@ description={MacDowell}
 
     \part{}
     \chapter{طرح کلی داستان}
-    \footnote{\LeopoldBloom}
-    \stephen در حال گذراندن ساعات اولیۀ صبح 16 ژوئن 1904 است و از دوست مسخره‌کننده‌اش، باک مالیگان و هینز، آشنای انگلیسی باک دوری می‌جوید. وقتی استیون می‌خواهد سر کار برود، باک به او می‌گوید که کلید خانه را با خود نبرد و آنها را در ساعت 12:30 در میخانه ببیند. استیون از باک می‌رنجد.
 
     \part{}
     %    \clearpage

@@ -1,4 +1,4 @@
-% Default Compiler: txs:///xelatex | txs:///bibtex
+% Default Compiler: txs:///xelatex | txs:///makeglossaries | txs:///xelatex
 % Default Bibliography Tool: BibTex
 
 \documentclass[12pt,onecolumn,a4paper]{book}
@@ -9,6 +9,7 @@
 \usepackage[top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[nopostdot]{glossaries}
 \usepackage{authblk}
 \usepackage{polyglossia}
 \usepackage[symbol]{footmisc}
@@ -20,6 +21,19 @@
 \defpersianfont\mfo[Scale=1.2]{IRLotus}
 \setlatintextfont[Scale=1]{IRLotus}
 %\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\makeglossaries
+
+\newglossaryentry{richardbest}
+{
+name={Richard Best},
+description={ریچارد بِست}
+}
+
+\newglossaryentry{maths}
+{
+name={مک‌داول},
+description={MacDowell}
+}
 
 \setcounter{Maxaffil}{0}
 \renewcommand\Authands{ و }
@@ -44,8 +58,12 @@
     \tableofcontents                        % Print table of contents
     \mainmatter
 
+
     \part{}
     \chapter{شخصیت‌ها}
+    دیروز \glsdesc{richardbest} رفته بود
+
+    امروز \footnote{\gls{maths}}.
 
     \part{}
     \chapter{تلماخوس}
@@ -72,5 +90,8 @@
     \footnote{\LeopoldBloom}
     \stephen در حال گذراندن ساعات اولیۀ صبح 16 ژوئن 1904 است و از دوست مسخره‌کننده‌اش، باک مالیگان و هینز، آشنای انگلیسی باک دوری می‌جوید. وقتی استیون می‌خواهد سر کار برود، باک به او می‌گوید که کلید خانه را با خود نبرد و آنها را در ساعت 12:30 در میخانه ببیند. استیون از باک می‌رنجد.
 
-
+    \part{}
+    %    \clearpage
+    \setglossarystyle{altlist}
+    \printglossary[title={واژه‌نامه},toctitle={واژه‌نامه}]
 \end{document}

@@ -9,7 +9,9 @@
 \usepackage[top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[nopostdot]{glossaries}
+\usepackage[nopostdot,xindy]{glossaries}
+\renewcommand*{\glstextformat}[1]{\textit{\textcolor{gray}{#1}}}
+
 \usepackage{authblk}
 \usepackage{polyglossia}
 \usepackage[symbol]{footmisc}
@@ -39,8 +41,9 @@
     \part{}
     \chapter{شخصیت‌ها}
     دیروز \gls{LeopoldBloom} رفته بود
+    دیروز \gls{LeopoldBloom} رفته بود
     دیروز \gls{Rudolph} رفته بود
-    دیروز \gls{Ellen} رفته بود
+    دیروز \gls{MarionBloom} رفته بود
 
     \part{}
     \chapter{تلماخوس}

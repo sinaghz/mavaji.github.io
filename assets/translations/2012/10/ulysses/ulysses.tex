@@ -1,4 +1,4 @@
-% Default Compiler: txs:///xelatex | txs:///makeglossaries | txs:///xelatex
+% Default Compiler: txs:///xelatex
 % Default Bibliography Tool: BibTex
 
 \documentclass[12pt,onecolumn,a4paper]{book}
@@ -9,25 +9,20 @@
 \usepackage[top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[nopostdot,xindy]{glossaries}
-\renewcommand*{\glstextformat}[1]{\textit{\textcolor{gray}{#1}}}
+\newcommand{\noun}[1]{\textit{\textcolor{gray}{#1}}}
 
 \usepackage{authblk}
 \usepackage{polyglossia}
-\usepackage[symbol]{footmisc}
 \setotherlanguage{english}
 \setotherlanguage{persian}
 \usepackage[nonamebreak]{natbib}
 \usepackage{xepersian}
 \settextfont[Scale=1.2]{IRLotus}
 \defpersianfont\mfo[Scale=1.2]{IRLotus}
-\setlatintextfont[Scale=1]{IRLotus}
-%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\makeglossaries
-\loadglsentries{glossary}
+\setlatintextfont[Scale=1]{Doulos SIL}
 
 \begin{document}
-    \title{خلاصۀ اولیس \footnote{\lr{SparkNotes Editors. ``SparkNote on Ulysses.'' SparkNotes.com. SparkNotes LLC. 2003.}}}
+    \title{خلاصۀ اولیس \LTRfootnote{\lr{SparkNotes Editors. ``SparkNote on Ulysses.'' SparkNotes.com. SparkNotes LLC. 2003.}}}
     \author{جیمز جویس\\
     ترجمه وحید مواجی
     }
@@ -40,36 +35,9 @@
 
     \part{}
     \chapter{شخصیت‌ها}
-    \gls{LeopoldBloom} - مردی سی و هشت ساله و مسئول تبلیغات در دوبلین. \gls{Bloom} در دوبلین با \gls{Rudolph}، پدر یهودیِ مجارستانی‌اش‌ و \gls{Ellen}، مادر کاتولیکِ ایرلندی‌اش بزرگ شده است. او از مطالعه و تفکر دربارۀ علوم و اختراعات و شرح معلوماتش به دیگران لذت می‌برد. \gls{Bloom}، عاطفی و کنجکاو است و عاشق موسیقی می‌باشد. او ذهنش درگیر روابط سردش با زنش \gls{Molly} است.
-
-    \gls{MarionBloom} - همسر \gls{LeopoldBloom}. \gls{MollyBloom} سی‌ساله است، کمی تپل و سبزه، خوش بر و رو و اهل لاس‌زدن می‌باشد. او تحصیلات زیادی ندارد ولی به هر تقدیر باهوش و صاحب‌نظر است. او خواننده‌ای حرفه‌ای است که توسط پدر ایرلندی‌اش، سرگرد \gls{BrianTweedy} در \gls{Gibraltar} بزرگ شده است. \gls{Molly} حوصلۀ \gls{Bloom} را ندارد مخصوصاً به این دلیل که از مرگ یازده سال پیشِ پسرشان \gls{Rudy} به این طرف، \gls{Bloom} دیگر با او صمیمی (در رابطۀ جنسی) نیست.
-
-    \gls{StephenDedalus} - شاعری پرالهام و بیست و چندساله. \gls{Stephen} باهوش و فوق‌العاده کتابخوان و علاقه‌مند به موسیقی است. به نظر می‌رسد که بیشتر در دنیای ذهنی خودش زندگی می‌کند تا اینکه عضو انجمنی یا حتی گروه دانشجویان پزشکی که همقطارانش هستند باشد. \gls{Stephen} در کودکی، بسیار مذهبی بوده است ولی بر اثر مرگ مادرش که کمتر از یک سال پیش رخ داده، اکنون با مسائل مربوط به شک و ایمان دست و پنجه نرم می‌کند.
-
-    \gls{MalachiMulligan} - دانشجوی پزشکی و دوست \gls{Stephen}. \gls{BuckMulligan} کمی چاق و اهل مطالعه است و تقریباً همه چیز را دست می‌اندازد. او به خاطر لطیفه‌های بی‌ادبی و بامزه‌ای که تعریف می‌کند تقریباً مورد علاقه همه به جز \gls{Stephen}، \gls{Simon} و \gls{Bloom} است.
-
-    \gls{Haines} - دانشجوی فرهنگ فولکلور که به خصوص علاقه‌مند به مطالعۀ قوم و فرهنگ ایرلندی است. \gls{Haines} اغلب اوقات ناخواسته مغرور و خودبین است. او در قلعه \gls{Martello} اقامت دارد جایی که \gls{Stephen} و \gls{Buck} هم در آنجا زندگی می‌کنند.
-
-    \gls{HughBoylan} - مدیر کنسرت قریب‌الوقع \gls{Molly} در بلفاست. \gls{BlazesBoylan} در شهر مشهور و محبوب است علی‌رغم اینکه کمی هرزه به نظر می‌رسد، مخصوصاً نسبت به زنان. \gls{Boylan} به \gls{Molly} علاقه‌مند شده است و آنها در بعدازظهرِ داستان رابطه‌ای با هم برقرار می‌کنند.
-
-    \gls{MillicentBloom} - دختر پانزده‌سالۀ \gls{Molly} و \gls{LeopoldBloom} که فی‌الواقع در اولیس ظاهر نمی‌شود. خانوادۀ \gls{Bloom} اخیراً \gls{Milly} را برای زندگی و یادگیری عکاسی به \gls{Mullingar} فرستاده‌اند. \gls{Milly}، بلوند و زیبا و علاقه‌مند به پسرها است – او با \gls{AlecBannon} در \gls{Mullingar} قرار و مدار می‌گذارد.
-
-    \gls{SimonDedalus} - پدرِ \gls{StephenDedalus}. \gls{SimonDedalus} در \gls{Cork} بزرگ شده و بعداً به دوبلین آمده و تا کنون مرد نسبتاً موفقی بوده است. مردان دیگر، او را سرلوحه خود قرار می‌دهند، هرچند که بعد از مرگ زنش، خانه و زندگی‌اش بی‌نظم و نامرتب شده است. \gls{Simon} دارای صدایی خوب و استعداد لطیفه‌گویی است و اگر عادت مشروب‌خوری نداشت می‌توانست از این همه استعداد سود ببرد. \gls{Simon} به شدت منتقد \gls{Stephen} است.
-
-    \gls{AEGeorgeRussell} – \gls{AE} نام مستعار \gls{GeorgeRussell}، شاعر معروفِ احیای ادبیات ایرلندی است که در کانونِ حلقه‌های ادبی ایرلند می‌باشد – حلقه‌های ادبی که \gls{Stephen} را به خود راه نمی‌دهند. او عمیقاً به عرفان اسرارآمیز علاقه‌مند است. بقیه مردها چنان با او مشورت می‌کنند که انگار حرفش وحی منزل است
-
-    \gls{RichardBest} - کتابداری در کتابخانۀ ملی. \gls{Best}، شخص مشتاق و علاقه‌مندی است، با این حال بخش عمده‌ای از مشارکتش در بحثِ هملت در اپیزود نهم، نشانه‌هایی از باورهای غلطی دارد که به خیال خودش درست می‌باشند.
-
-    \gls{EdyBoardman} - یکی از دوستان \gls{GertyMacDowell}. رفتار مغرورانۀ \gls{Gerty}، \gls{Edy} را که می‌خواهد او را با گوشه و کنایه ضایع کند، می‌رنجاند.
-
-    \gls{JosieNeePowell} و \gls{DenisBreen} - \gls{JosiePowell} و \gls{Bloom} وقتی جوان‌تر بودند به هم علاقه داشتند.
-    \gls{Josie} زیبا و اهل لاس‌زدن بود.
-    بعد از اینکه \gls{Bloom} با \gls{Molly} ازدواج کرد، \gls{Josie} هم با \gls{Denis} ازدواج کرد.
-     \gls{DenisBreen} کمی دیوانه است و پارانوید به نظر می‌رسد.
-    مراقبت از چنین شوهر ابلهی اثر خود را روی \gls{Josie} گذاشته است و اکنون نحیف و خسته به نظر می‌رسد.
 
     \part{}
-    \chapter[\glsentryname{Telemachus}]{\gls{Telemachus}}
+    \chapter[تلماخوس]{تلماخوس\protect\footnote{\lr{Telemachus}-\rl{ در اسطوره‌های یونان پسر اولیس و پنلوپه است. در کودکی پسری ترسو بود. اما آتنه به او شجاعت بخشید. در دوران سرگردانی پدر به جست‌وجویش رفت.}}}
 
     \chapter{نستور}
     \chapter{پروتئوس}
@@ -91,9 +59,4 @@
 
     \part{}
     \chapter{طرح کلی داستان}
-
-    \part{}
-    \clearpage
-    \setglossarystyle{altlist}
-    \printglossary[title={واژه‌نامه},toctitle={واژه‌نامه}]
 \end{document}

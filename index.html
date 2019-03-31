@@ -2,22 +2,18 @@
 layout: single
 author_profile: true
 ---
-<li>
-    <a href="/papers" itemprop="sameAs">
-        <i class="fas fa-book" aria-hidden="true"></i> Papers
-    </a>
-</li>
-<li>
-    <a href="/translations" itemprop="sameAs">
-        <i class="fas fa-pen-fancy" aria-hidden="true"></i> Translations
-    </a>
-</li>
-<li>
-    <a href="/fun" itemprop="sameAs">
-        <i class="fas fa-palette" aria-hidden="true"></i> Fun
-    </a>
-</li>
+<div id="archives">
+    {% for category in site.categories %}
+    <div class="archive-group">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+        <p></p>
 
+        <h3 class="category-head"><a href="{{ site.baseurl }}{{ category_name }}">{{ category_name }}</a></h3>
+        <a name="{{ category_name | slugize }}"></a>
+    </div>
+    {% endfor %}
+</div>
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 

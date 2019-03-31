@@ -1,11 +1,10 @@
 ---
-permalink: /translations/
+permalink: /Translations/
 title: "Translations"
 ---
 
-<li>
-    <a href="/2012/10/06/ulysses.html" itemprop="sameAs">
-        <i class="fas fa-pen-fancy" aria-hidden="true"></i> خلاصه اولیس
-    </a>
-</li>
-
+{% for post in site.categories["Translations"] %}
+<article class="archive-item">
+    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h3>
+</article>
+{% endfor %}

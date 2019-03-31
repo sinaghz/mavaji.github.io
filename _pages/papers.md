@@ -1,11 +1,11 @@
 ---
-permalink: /papers/
+permalink: /Papers/
 title: "Papers"
 ---
 
-<li>
-    <a href="/2011/11/04/icams2011.html" itemprop="sameAs">
-        <i class="fas fa-book" aria-hidden="true"></i> icams2011
-    </a>
-</li>
+{% for post in site.categories["Papers"] %}
+<article class="archive-item">
+    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h3>
+</article>
+{% endfor %}
 

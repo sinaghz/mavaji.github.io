@@ -25,8 +25,10 @@ Mavaji, V., Eslami, M., Vazirnezhad, B., "Pars Morph: A Persian Morphological An
 
 
 {::options parse_block_html="true" /}
-[<i class="fab fa-github-square"></i>](https://github.com/mavaji/pars-morph)
-[<i class="fas fa-file-pdf" aria-hidden="true"></i>]({{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.pdf)
+[<i class="fab fa-github-square"></i> Source Code](https://github.com/mavaji/pars-morph)
+<br>
+[<i class="fas fa-file-pdf" aria-hidden="true"></i> PDF]({{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.pdf)
+<br>
 [<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>]({{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.tex)
 
 <object data="{{ site.baseurl }}/assets/papers/2012/05/parsmorph/parsmorph.pdf" width="1000" height="1500" type='application/pdf' border="0" />

@@ -4,7 +4,7 @@ title: "My Set of Stationery"
 hidden: true
 comments: false
 categories:
-  - Blogs
+  - Fun
 tags:
   - Stationery
 gallery:

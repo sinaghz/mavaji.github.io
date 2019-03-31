@@ -4,7 +4,7 @@ title: "Calligraphy"
 hidden: true
 comments: false
 categories:
-  - Blogs
+  - Fun
 tags:
   - Calligraphy
 ---

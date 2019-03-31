@@ -1,6 +1,7 @@
 ---
 permalink: /:year/:month/:day/:title.html
 title: "My Set of Stationery"
+hidden: true
 comments: false
 categories:
   - Blogs

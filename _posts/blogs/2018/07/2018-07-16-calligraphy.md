@@ -1,6 +1,7 @@
 ---
 permalink: /:year/:month/:day/:title.html
 title: "Calligraphy"
+hidden: true
 comments: false
 categories:
   - Blogs

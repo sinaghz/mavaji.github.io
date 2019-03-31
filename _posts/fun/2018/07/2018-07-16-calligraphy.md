@@ -14,5 +14,5 @@ Calligraphy done by me.
 <br>
 
 <figure>
-    <a href="/assets/img/blogs/2018/07/16/nastaliq1.jpg"><img src="/assets/img/blogs/2018/07/16/nastaliq1.jpg"></a>
+    <a href="/assets/fun/2018/07/16/nastaliq1.jpg"><img src="/assets/fun/2018/07/16/nastaliq1.jpg"></a>
 </figure>

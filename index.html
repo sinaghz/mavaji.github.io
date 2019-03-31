@@ -4,14 +4,16 @@ author_profile: true
 ---
 <div id="archives">
     {% for category in site.categories %}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    {% if category_name != "Blogs" %}
     <div class="archive-group">
-        {% capture category_name %}{{ category | first }}{% endcapture %}
         <div id="#{{ category_name | slugize }}"></div>
         <p></p>
 
         <h3 class="category-head"><a href="{{ site.baseurl }}{{ category_name }}">{{ category_name }}</a></h3>
         <a name="{{ category_name | slugize }}"></a>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 

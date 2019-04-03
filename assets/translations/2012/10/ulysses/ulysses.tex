@@ -3,6 +3,7 @@
 
 \documentclass[12pt]{book}
 \usepackage[x11names]{xcolor}
+\usepackage{titlesec}
 \usepackage[linktocpage=true,colorlinks,citecolor=blue,pagebackref=true]{hyperref}
 \usepackage[top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
 \usepackage[utf8]{inputenc}
@@ -13,6 +14,10 @@
 \settextfont[Scale=1.2]{Far.Mashin Tahrir}
 \defpersianfont\mfo[Scale=1.2]{Far.Mashin Tahrir}
 \setlatintextfont[Scale=0.8]{Courier New}
+
+\titleformat{\chapter}
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter.}{20pt}{\huge}
+\renewcommand \chaptertitlename {اپیزود}
 
 \begin{document}
     \title{خلاصۀ اولیس \LTRfootnote{\lr{SparkNotes Editors. ``SparkNote on Ulysses.'' SparkNotes.com. SparkNotes LLC. 2003.}}}
@@ -26,8 +31,7 @@
     \mainmatter
 
 
-    \part{}
-    \chapter{شخصیت‌ها}
+    \part{شخصیت‌ها}
     \paragraph{\noun{لئوپلد بلوم}\protect\LTRfootnote{\lr{Leopold Bloom}}}
     مردی سی و هشت ساله و مسئول تبلیغات در دوبلین. \noun{بلوم} در دوبلین با \noun{رودلف}\LTRfootnote{\lr{Rudolph}}، پدر یهودیِ مجارستانی‌اش‌ و \noun{الن}\LTRfootnote{\lr{Ellen}}، مادر کاتولیکِ ایرلندی‌اش بزرگ شده است. او از مطالعه و تفکر دربارۀ علوم و اختراعات و شرح معلوماتش به دیگران لذت می‌برد. \noun{بلوم}، عاطفی و کنجکاو است و عاشق موسیقی می‌باشد. او ذهنش درگیر روابط سردش با زنش \noun{مالی} است.
     \paragraph{\noun{مریان (مالی) بلوم}\protect\LTRfootnote{\lr{Marion (Molly) Bloom}}}
@@ -107,7 +111,7 @@
     \paragraph{\noun{فلوری تالبوت}\protect\LTRfootnote{\lr{Florry Talbot}}}
     یکی از فاحشه‌های فاحشه‌خانۀ بلا کوهن. فلوری چاق است و کودن به نظر می‌رسد ولی به راحتی خوشحال می‌شود.
 
-    \part{}
+    \part{اپیزودها}
     \chapter[تلماخوس]{تلماخوس\protect\footnote{\lr{Telemachus}-\rl{ در اسطوره‌های یونان پسر اولیس و پنلوپه است. در کودکی پسری ترسو بود. اما آتنه به او شجاعت بخشید. در دوران سرگردانی پدر به جست‌وجویش رفت.}}}\label{ep:1}
     ساعت حدود 8 صبح است و باک مالیگان، در حال تقلید و مسخرۀ مراسم عشاء ربانی با کاسۀ ریش‌تراشی‌اش، \noun{استیون} ددالوس را صدا می‌زند تا بالای سقف قلعۀ مارتلو که مشرف بر خلیج دوبلین است، بیاید.  \noun{استیون} به مسخره‌بازیِ پرخاشگرانۀ باک بی‌توجه است - او حوصلۀ هینز را ندارد، فرد انگلیسی‌ای که باک دعوتش کرده تا در قلعه بماند. \noun{استیون} با ناله‌های هینز دربارۀ کابوسی که در آن یک پلنگ سیاه دیده بود، از خواب شبانه بیدار شده است.
 
@@ -484,8 +488,7 @@
 
     \chapter[پنلوپه]{پنلوپه\protect\footnote{\lr{Penelope}-\rl{در اسطوره‌های یونان، همسر اولیس و مادر تلماخوس است. او در جوانی به دلیل زیبایی‌اش خواستگاران زیادی داشت. پدرش برای جلوگیری از دعوا و کشمکش مسابقه‌ای ترتیب داد تا برندۀ آن را به دامادی انتخاب کند. در این مسابقه اولیس سرافراز بیرون آمد و با پنلوپه ازدواج کرد.}}}\label{ep:18}
 
-    \part{}
-    \chapter{طرح کلی داستان}
+    \part{طرح کلی داستان}
     \noun{استیون ددالوس} در حال گذراندن ساعات اولیۀ صبح 16 ژوئن 1904 است و از دوست مسخره‌کننده‌اش، \noun{باک مالیگان} و \noun{هینز}، آشنای انگلیسی \noun{باک} دوری می‌جوید. وقتی \noun{استیون} می‌خواهد سر کار برود، \noun{باک} به او می‌گوید که کلید خانه را با خود نبرد و آنها را در ساعت 12:30 در میخانه ببیند. \noun{استیون} از \noun{باک} می‌رنجد.
 
     حدود ساعت 10 صبح، \noun{استیون} در کلاس درسش در مدرسۀ پسرانۀ \noun{گرت دیزی} دارد تاریخ درس می‌دهد. بعد از کلاس، \noun{استیون} با \noun{دیزی} ملاقات می‌کند تا حقوقش را بگیرد. \noun{دیزیِ} کوته‌فکر و متعصب، راجع به زندگی برای \noun{استیون} موعظه می‌کند. \noun{استیون} قبول می‌کند که نوشتۀ \noun{دیزی} دربارۀ بیماری احشام را به آشنایانش در روزنامه بدهد.

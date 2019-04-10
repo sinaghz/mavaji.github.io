@@ -9,16 +9,17 @@ author_profile: true
         <div id="#{{ category_name | slugize }}"></div>
         <p></p>
 
-        <h3 class="category-head"><a href="{{ site.baseurl }}{{ category_name }}">{{ category_name }}</a></h3>
+        <h3 class="category-head"><a href="{{ site.baseurl }}{{ category_name }}">{{ category_name }} ({{category[1].size}})</a></h3>
         <a name="{{ category_name | slugize }}"></a>
     </div>
     {% endfor %}
 </div>
 
+{% assign public_repositories = site.github.public_repositories | where:'fork', false | sort: 'stargazers_count' | reverse %}
 <div class="archive-group">
     <div id="#Projects"></div>
     <p></p>
 
-    <h3 class="category-head"><a href="{{ site.baseurl }}Projects">Projects</a></h3>
+    <h3 class="category-head"><a href="{{ site.baseurl }}Projects">Projects ({{ public_repositories.size }})</a></h3>
     <a name="Projects"></a>
 </div>

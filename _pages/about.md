@@ -1,7 +1,8 @@
 ---
-permalink: /about/
-title: "About"
+permalink: /resume/
+title: "Résumé"
 ---
+[<i class="fas fa-file-pdf" aria-hidden="true"></i> PDF]({{ site.baseurl }}/assets/resume/Vahid_Mavaji_CV.pdf)
+<br>
 
-I am a programmer.
-{: style="text-align: justify;"}
+<object data="{{ site.baseurl }}/assets/resume/Vahid_Mavaji_CV.pdf" width="1000" height="1500" type='application/pdf' border="0" />

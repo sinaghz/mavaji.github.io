@@ -1,0 +1,202 @@
+%Default Compiler: txs:///xelatex | txs:///biber | txs:///xelatex
+%Default Bibliography Tool: Biber
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+\usepackage[hidelinks]{hyperref}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+% If using xelatex or lualatex:
+\setmainfont{Lato}
+\else
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{publications.bib}
+
+\begin{document}
+    \name{Vahid Mavaji}
+    \tagline{Software Engineer}
+    \photo{2.8cm}{vahid-mavaji}
+    \personalinfo{%
+    % Not all of these are required!
+    % You can add your own with \printinfo{symbol}{detail}
+    \email{\href{mailto:mavaji@gmail}{mavaji@gmail.com}}
+    \phone{+98-912-507-4622}
+    \location{Tehran, Iran}
+    \homepage{\href{https://mavaji.github.io}{mavaji.github.io}}
+    \linkedin{\href{https://linkedin.com/in/mavaji}{linkedin.com/in/mavaji}}
+    \github{\href{https://github.com/mavaji}{github.com/mavaji}}
+    %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+    % \orcid{orcid.org/0000-0000-0000-0000}
+    }
+
+    %% Make the header extend all the way to the right, if you want.
+    \begin{fullwidth}
+        \makecvheader
+    \end{fullwidth}
+
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+
+    %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+    %% You can always just use \marginpar{...} if you do
+    %% not need to align the top of the contents to any
+    %% \cvsection title in the "main" bar.
+    %-----------------------------------------------------------------------------------------------------------------------
+    \addnextpagesidebar[-1ex]{p2sidebar}
+    \cvsection[p1sidebar]{Experience}
+
+    \cvevent{Data Engineer}{\href{http://www.pegahtech.ir/}{Pegah Tech}{ \textit{\small (Pegah Dadekavan Sharif)}}}{Oct. 2018 -- Feb. 2019}{Tehran, Iran}
+    \begin{itemize}
+        \item
+        {Worked on {\href{https://tapsell.ir}{Tapsell}} project using big data architectures and solutions to implement parallel
+        processing of multiple data streams.
+        Tapsell is a digital ad agency/network, enabling both advertisers and publishers to achieve their demanding targets.
+        It runs CPI, CPA, CPL, and CPC campaigns for local advertisers,
+        agencies, and app owners/developers and is able to show the right ad at the right time, to deliver highest eCPMs.}
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Technical Lead}{\href{https://alounak.com/}{Alounak}{ \textit{\small (Alounak Tadbirgaran Houshmand)}}}{Oct. 2017 -- Jul. 2018}{Tehran, Iran}
+    \begin{itemize}
+        \item
+        {Worked on Alounak software, which connects real estate agents to consumers; people can search for properties and contact agents; it consists of Android and iOS apps for agents and consumers, in addition to a comprehensive responsive website.}
+        \item
+        {Defined and coordinated the technical tasks for the development of the software.}
+        \item
+        {Created and managed architecture diagrams and plans.}
+        \item
+        {Developed the architecturally significant components of the software system.}
+        \item
+        {Communicated technical issues/decisions effectively to PM and sponsor by using business terms.}
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Technical Lead}{\href{https://www.dadekavan.ir/}{DAB}{ \textit{\small (Dadekavan Andishe Bartar)}}}{Jul. 2013 -- Sep. 2017}{Tehran, Iran}
+    \begin{itemize}
+        \item
+        {Designed and developed a requirement gathering and workflow management system for National Informatics Corporation.}
+        \item
+        {Designed and developed a news gathering, information mining and analysis system.}
+        \item
+        {Worked on student management systems for major Iranian universities.}
+        \item
+        {Led a team of backend and frontend developers.}
+        \item
+        {Wrote comprehensive documents for the projects.}
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Senior Java Developer}{\href{http://www.iraninsurance.ir/}{IIC}{ \textit{\small (Department of Information Technology and Statistics, Iran Insurance Company)}}}{Jan. 2007 -- Jun. 2013}{Tehran, Iran}
+    \begin{itemize}
+        \item
+        {Designed, developed, and maintained a core module for insurance subsystems (health, automobile and transport) as a member of software architecture team.}
+        \item
+        {Provided templates and standards and assisted colleagues in using the core module in insurance subsystems.}
+        \item
+        {Provided necessary documentation for the project.}
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Junior Java Developer}{\href{http://kyansoftco.com/}{Kyansoft}{ \textit{\small (Kian Noor Rayaneh)}}}{Apr. 2004 -- Sep. 2004}{Tehran, Iran}
+    \begin{itemize}
+        \item
+        {Worked on LUCAS POS system (a retail management system used throughout Europe) with Logware GmbH.}
+    \end{itemize}
+    %-----------------------------------------------------------------------------------------------------------------------
+    \medskip
+    \addnextpagesidebar[-1ex]{p3sidebar}
+    %    \clearpage
+    %-----------------------------------------------------------------------------------------------------------------------
+    \cvsection{Publications}
+
+    \nocite{*}
+
+    \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+    \divider
+
+    \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+
+    \divider
+
+    \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+    \divider
+
+    \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Theses}},type=thesis]
+
+    %% If the NEXT page doesn't start with a \cvsection but you'd
+    %% still like to add a sidebar, then use this command on THIS
+    %% page to add it. The optional argument lets you pull up the
+    %% sidebar a bit so that it looks aligned with the top of the
+    %% main column.
+    % \addnextpagesidebar[-1ex]{page3sidebar}
+    %-----------------------------------------------------------------------------------------------------------------------
+    \cvsection{Coursework}
+    \begin{itemize}
+        \item {\textbf{Computational Linguistics (M.Sc.)}: {Intro. to Linguistics, Phonetics, Formal Syntax, Intro. to Computational Linguistics, Semantics and Pragmatics, Statistical Methods in NLP, Morphology, NLP, Adv. Syntax, Acoustics, Psycholinguistics, Phonology, Linguistics and Literature; \textbf{GPA: \href{https://mavaji.github.io/assets/docs/cl-grades.pdf}{18.36/20}}.}}
+        \item {\textbf{Computer Engineering (M.Sc.)}: {Fault-Tolerant Sys Design, Adv. Computer Architecture, Testability, Fuzzy Systems, Adv. Computer Networks, Interconnection Networks, Digital Signal Processing, Stochastic Processes; \textbf{GPA: \href{https://mavaji.github.io/assets/docs/ce-grades.pdf}{17.88/20}}.}}
+        \item {\textbf{Computer Engineering (B.Sc.)}: {Computer Programming, Data Structures, Assembly Programming, Digital Logic Circuits, Algorithm Design, Computer Architecture, Digital Electronics, Signals and Systems, Artificial Intelligence, Design and Implementation of Programming Languages, Operating Systems, Microprocessors, Data Transmission, Linear Control Systems, Storage and Retrieval, Languages and Machines, Computer Networks, VLSI, Computer Systems Architecture; \textbf{GPA: \href{https://mavaji.github.io/assets/docs/iust-grades.pdf}{16.25/20}}.}}
+        \item {\textbf{Architecture}: {Architectural Perception I and II, Environmental Perception, Applied Geometry, Materials and Construction Workshop, Statics.}}
+    \end{itemize}
+
+
+    %-----------------------------------------------------------------------------------------------------------------------
+\end{document}

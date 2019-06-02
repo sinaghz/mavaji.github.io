@@ -1,6 +1,6 @@
 ---
 permalink: /:year/:month/:day/:title.html
-hidden: true
+hidden: false
 title: "مصاحبه مسعود بهنود با استاد بنان"
 comments: false
 categories:

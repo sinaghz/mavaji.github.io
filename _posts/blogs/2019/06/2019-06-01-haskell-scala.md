@@ -1,7 +1,7 @@
 ---
 permalink: /:year/:month/:day/:title.html
 title: "How to write Haskell-like functions in Scala"
-hidden: true
+hidden: false
 comments: false
 categories:
   - Blogs

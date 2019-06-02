@@ -1,6 +1,6 @@
 ---
 permalink: /:year/:month/:day/:title.html
-hidden: true
+hidden: false
 title: "جوامع الحکایات و لوامع الروایات"
 comments: false
 categories:

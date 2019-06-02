@@ -1,6 +1,6 @@
 ---
 permalink: /:year/:month/:day/:title.html
-hidden: true
+hidden: false
 title: "راحةالصدور و آیةالسرور"
 comments: false
 categories:

@@ -1,6 +1,6 @@
 ---
 permalink: /:year/:month/:day/:title.html
-hidden: true
+hidden: false
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true

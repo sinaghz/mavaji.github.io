@@ -1,7 +1,7 @@
 ---
 permalink: /:year/:month/:day/:title.html
 title: "My Set of Stationery"
-hidden: true
+hidden: false
 comments: false
 categories:
   - Fun

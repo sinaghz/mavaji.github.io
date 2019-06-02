@@ -1,7 +1,7 @@
 ---
 permalink: /:year/:month/:day/:title.html
 title: "نوشته"
-hidden: true
+hidden: false
 comments: false
 categories:
   - Blogs

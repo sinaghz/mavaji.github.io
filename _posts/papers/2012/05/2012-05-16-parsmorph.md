@@ -1,7 +1,7 @@
 ---
 permalink: /:year/:month/:day/:title.html
 title: "Pars Morph: A Persian Morphological Analyzer"
-hidden: true
+hidden: false
 categories:
   - Papers
 tags:
